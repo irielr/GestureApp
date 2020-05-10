@@ -84,6 +84,6 @@ var app = {
 };
 
 if ('addEventListener' in document) {
-	document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+	//document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
 	document.addEventListener('DOMContentLoaded', function() { app.inicio(); }, false );
 }
