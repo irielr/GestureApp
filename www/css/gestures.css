@@ -1,0 +1,151 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+    background-color: #EEE8AA;
+}
+
+body.claro {
+	background-color: #C0C0C0;
+}
+
+body.oscuro {
+	background-color: #4169E1;
+}
+
+.footer {
+	min-height: 20px;
+	background-color: #8FBC8F;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	font-style: italic;
+	font-size: small;
+	text-align: center;
+	color: #ffffff;	
+}
+
+.header {
+	padding: 0px;
+	height: 59px;
+	background-color: #8FBC8F;
+	color: #2F4F4F;
+	text-align: center;
+	line-height: 59px;
+	width: 100%;
+}
+
+button {
+	background-color: #4682B4;
+	border-radius: 10px;
+	color: #ffffff;
+	border: none;
+	width: 80%;
+	padding: 30px;
+	font-size: 1em;
+	margin-top: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#zona {
+	background-color:#4682B4;
+	width: 100%;
+	margin-top: 50px;
+	min-height: 180px;
+	display: block;
+	overflow: auto;
+}
+
+#info {
+	color: #EEE8AA;
+	font-size: 2em;
+	margin-top: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Animaciones para algunos gestos
+   Se utiliza el prefijo:
+   -webkit- para Android y IPhone
+   -ms- WindowsMobile de Microsoft 
+   -mz- Firefox
+   -o-  Opera  */
+#zona.doubletap {
+	-webkit-animation: pulsacion 1.5s 1; /* aquí asignamos la animación durante un tiempo 1.5s y la cantidad de veces: 1 */
+}
+
+#zona.press {
+	-webkit-animation: pulsacion 1.5s 1;
+}
+
+@-webkit-keyframes pulsacion { 
+	0%,100% { background-color: #4682B4; }
+	50% { background-color: #EEE8AA; }
+}
+
+@-webkit-keyframes presion { 
+	0%,100% { background-color: #4682B4; }
+	50% { background-color: #4169E1; }
+}
+
+#zona.swipederecha {
+	-webkit-animation: swipederecha 1.5s 1; 
+}
+
+#zona.swipeizquierda {
+	-webkit-animation: swipeizquierda 1.5s 1;
+}
+
+@-webkit-keyframes swipederecha 
+{  
+	0%, 100% { margin-left: 0%; }
+	50% { margin-left: 100%; }
+}
+
+@-webkit-keyframes swipeizquierda 
+{ 
+	0%, 100% { width: 100%; }
+	50% { width: 0%; }
+}
+
+#zona.rotar {
+	-webkit-animation: rotar 1.5s 1;
+}
+
+@-webkit-keyframes rotar 
+{ 
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+/*/////////////////////////////////
+
+body.swipeView {
+	display: grid;
+	grid-template-columns: repeat(4, 100%);
+	will-change: transform;
+	align-content: center;
+	overflow-x: auto;
+	scroll-snap-coordinate: 0 0;
+	scroll-snap-points-x: repeat(100%);
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+}
+
+section {
+	height: 150px;
+	scroll-snap-align: start;
+}
+
+.green {
+	background: #ABE66F;
+}
+
+.purple {
+	background: #4E4E94;
+}
+
+.orange {
+	background: #FD8F58;
+}
+*/
